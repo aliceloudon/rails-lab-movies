@@ -15,4 +15,13 @@ class MoviesController < ApplicationController
     render json: movie
   end
 
+  def destroy
+    movie = Movie.find(params[:id])
+    if movie.destroy!
+      render json: { status: :success }
+    else
+      render json: { status: :delete_failed }
+    end
+  end
+
 end
