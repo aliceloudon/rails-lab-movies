@@ -15,6 +15,11 @@ class ShowingsController < ApplicationController
       })
   end
 
+  def all_shows
+    showings = Showing.all
+    render json: showings
+  end
+
   def create
     showing = Showing.create({
         movie_id: params[:movie_id],

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :cinemas
 
+  get '/showings' => 'showings#all_shows'
+
 end
