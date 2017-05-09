@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2017-05-09 11:39:35
+  movie_id: 
+  cinema_id: 
+
+two:
+  time: 2017-05-09 11:39:35
+  movie_id: 
+  cinema_id: 
