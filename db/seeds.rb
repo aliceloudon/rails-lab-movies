@@ -7,6 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Movie.delete_all
-Movie.create({
+Actor.delete_all
+
+m1 = Movie.create({
   title: "Forrest Gump"
+})
+
+Actor.create({
+  name: "Tom Hanks",
+  movie: m1
 })
