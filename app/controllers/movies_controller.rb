@@ -15,6 +15,15 @@ class MoviesController < ApplicationController
     render json: movie
   end
 
+  def update
+    movie = Movie.find(params[:id])
+    if movie.update_attributes(params.require(:movie).permit([:title]))
+      render json: movie
+    else
+      render json: { status: :update_failed }
+    end
+  end
+
   def destroy
     movie = Movie.find(params[:id])
     if movie.destroy!
