@@ -15,4 +15,13 @@ class ShowingsController < ApplicationController
       })
   end
 
+  def create
+    showing = Showing.create({
+        movie_id: params[:movie_id],
+        cinema_id: params[:cinema_id],
+        time: params[:time]
+      })
+    render json: showing
+  end
+
 end

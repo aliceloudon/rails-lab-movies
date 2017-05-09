@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     resources :showings
   end
 
+  resources :cinemas
+
 end
