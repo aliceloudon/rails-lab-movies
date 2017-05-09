@@ -10,4 +10,9 @@ class MoviesController < ApplicationController
     render json: movie  
   end
 
+  def create
+    movie = Movie.create(params.require(:movie).permit([:title]))
+    render json: movie
+  end
+
 end
