@@ -24,4 +24,15 @@ class ShowingsController < ApplicationController
     render json: showing
   end
 
+  def destroy
+
+    showing = Showing.find(params[:id])
+    if showing.destroy!
+      render json: { status: :success }
+    else
+      render json: { status: :delete_failed }
+    end
+
+  end
+
 end
